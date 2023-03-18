@@ -22,14 +22,7 @@ const Cart = (props) => {
   };
   const onsendDataUser = (userData) => {
     setSubmmiting(true);
-    fetch("https://mealsdata-5e51b-default-rtdb.firebaseio.com/userData.json", {
-      method: "POST",
-      body: JSON.stringify({
-        userdata: userData,
-        userItems: context.items,
-        userTotalAmount: context.totalAmount,
-      }),
-    });
+   
     setSubmmiting(false);
     setSubmit(true);
     context.clearItem();
